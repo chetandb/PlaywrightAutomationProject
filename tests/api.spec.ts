@@ -1,9 +1,8 @@
 import { test, expect } from '@playwright/test';
-import testData from '../fixtures/testData.json';
 
 test('Fetch GitHub user details', async ({ request }) => {
-  const response = await request.get(`/users/${testData.validUser.username}`);
+  const response = await request.get('https://api.github.com/users/octocat');
   expect(response.ok()).toBeTruthy();
-  const user = await response.json();
-  expect(user.login).toBe(testData.validUser.username);
+  const data = await response.json();
+  expect(data.login).toBe('octocat');
 });
