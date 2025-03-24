@@ -1,4 +1,5 @@
-import { PlaywrightTestConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
+import AllureReporter from 'allure-playwright';
 
 const config: PlaywrightTestConfig = {
   use: {
@@ -13,6 +14,10 @@ const config: PlaywrightTestConfig = {
   ],
   testDir: './tests',
   timeout: 30000,
+  reporter: [
+    ['list'],
+    ['allure-playwright']
+  ],
 };
 
-export default config;
+export default defineConfig(config);

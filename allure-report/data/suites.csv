@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1146","basic test","API tests","Mon Mar 24 22:27:59 IST 2025","passed","Mon Mar 24 22:28:00 IST 2025","","example.spec.ts","",""
+"","497","Fetch GitHub user details","API tests","Mon Mar 24 22:27:59 IST 2025","passed","Mon Mar 24 22:28:00 IST 2025","","api.spec.ts","",""
+"","1151","visual regression test","API tests","Mon Mar 24 22:27:59 IST 2025","passed","Mon Mar 24 22:28:00 IST 2025","","visual.spec.ts","",""

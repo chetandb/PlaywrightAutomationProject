@@ -6,9 +6,12 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
-    "test:debug": "playwright test --debug"
+    "test:debug": "playwright test --debug",
+    "allure:generate": "allure generate ./allure-results --clean",
+    "allure:serve": "allure serve ./allure-results"
   },
   "dependencies": {
+    "allure-playwright": "^3.2.1",
     "playwright": "^1.0.0"
   },
   "devDependencies": {
