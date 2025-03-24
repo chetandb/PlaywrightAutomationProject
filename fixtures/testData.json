@@ -1,0 +1,8 @@
+{
+  "validUser": {
+    "username": "octocat"
+  },
+  "invalidUser": {
+    "username": "invalid_user"
+  }
+}
