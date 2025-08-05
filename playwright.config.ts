@@ -1,7 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
-import AllureReporter from 'allure-playwright';
 
-const config: PlaywrightTestConfig = {
+const config = {
   use: {
     baseURL: 'https://gh-users-search.netlify.app/',
     ignoreHTTPSErrors: true,
@@ -14,10 +13,7 @@ const config: PlaywrightTestConfig = {
   ],
   testDir: './tests',
   timeout: 30000,
-  reporter: [
-    ['list'],
-    ['allure-playwright']
-  ],
+  reporter: 'list',
 };
 
 export default defineConfig(config);

@@ -1,1 +1,0 @@
-C:\Chetan\code\PlaywrightAutomationProject\tests\visual.spec.ts-snapshots\example-API-tests-win32.png does not match, writing actual.

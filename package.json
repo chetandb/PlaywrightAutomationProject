@@ -1,21 +1,25 @@
 {
-  "name": "playwright-automation-project",
-  "version": "1.0.0",
-  "description": "A Playwright automation project",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
-    "allure:generate": "allure generate ./allure-results --clean",
-    "allure:serve": "allure serve ./allure-results"
+    "bdd": "npx cucumber-js --config serenity.cucumber.js"
   },
+  "name": "playwright-automation-project",
+  "version": "1.0.0",
+  "description": "A Playwright automation project",
+  "main": "index.js",
   "dependencies": {
-    "allure-playwright": "^3.2.1",
     "playwright": "^1.0.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.51.1"
+    "@cucumber/cucumber": "^12.1.0",
+    "@playwright/test": "^1.51.1",
+    "@serenity-js/assertions": "^3.34.0",
+    "@serenity-js/console-reporter": "^3.34.0",
+    "@serenity-js/core": "^3.34.0",
+    "@serenity-js/playwright": "^3.34.0"
   },
   "author": "",
   "license": "ISC"
