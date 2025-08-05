@@ -1,3 +1,4 @@
+
 # Playwright Automation Project
 
 ## Setup
@@ -7,31 +8,33 @@
    ```sh
    npm install
    ```
-3. Install Playwright test runner:
-   ```sh
-   npm install @playwright/test
-   ```
 
 ## Running Tests
 
-1. Run all tests:
-   ```sh
-   npm test
-   ```
+- Run all Playwright tests:
+  ```sh
+  npm test
+  ```
+- Run tests in headed mode:
+  ```sh
+  npm run test:headed
+  ```
+- Run tests in debug mode:
+  ```sh
+  npm run test:debug
+  ```
 
-2. Run tests in headed mode:
-   ```sh
-   npm run test:headed
-   ```
+## BDD (Cucumber) Tests
 
-3. Run tests in debug mode:
-   ```sh
-   npm run test:debug
-   ```
+- Run Serenity/JS Cucumber BDD tests:
+  ```sh
+  npm run bdd
+  ```
 
 ## Project Structure
 
-- `tests`: Contains all test files.
-- `fixtures`: Contains test data and fixtures.
-- `utils`: Contains utility functions and helpers.
-- `config`: Contains configuration files.
+- `tests/` - Playwright test files
+- `features/` - Cucumber feature files and step definitions (for BDD)
+- `utils/` - Utility helpers (if any)
+
+All other folders and files have been removed for a minimal, maintainable setup.
