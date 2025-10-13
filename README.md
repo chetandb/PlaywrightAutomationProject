@@ -1,3 +1,13 @@
+## Playwright MCP Server
+
+The Playwright Model Context Protocol (MCP) server enables advanced automation, remote control, and integration with tools that support the MCP protocol.
+
+- Start the MCP server:
+  ```sh
+  npm run mcp-server
+  ```
+
+The server will start and listen for MCP client connections. See Playwright documentation for more details on MCP usage and integration.
 
 # Playwright Automation Project
 

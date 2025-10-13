@@ -4,7 +4,8 @@
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
-    "bdd": "npx cucumber-js --config serenity.cucumber.js"
+  "bdd": "npx cucumber-js --config serenity.cucumber.js",
+  "mcp-server": "npx playwright mcp-server"
   },
   "name": "playwright-automation-project",
   "version": "1.0.0",
