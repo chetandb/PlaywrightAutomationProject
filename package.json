@@ -4,8 +4,8 @@
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
-  "bdd": "npx cucumber-js --config serenity.cucumber.js",
-  "mcp-server": "npx playwright mcp-server"
+    "bdd": "npx cucumber-js --config serenity.cucumber.js",
+    "mcp-server": "npx playwright mcp-server"
   },
   "name": "playwright-automation-project",
   "version": "1.0.0",
@@ -20,7 +20,8 @@
     "@serenity-js/assertions": "^3.34.0",
     "@serenity-js/console-reporter": "^3.34.0",
     "@serenity-js/core": "^3.34.0",
-    "@serenity-js/playwright": "^3.34.0"
+    "@serenity-js/playwright": "^3.34.0",
+    "typescript": "^5.9.3"
   },
   "author": "",
   "license": "ISC"

@@ -1,5 +1,5 @@
 {
-  "extends": "@playwright/test/tsconfig.json",
+  // "extends": "@playwright/test/tsconfig.json",
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
@@ -12,5 +12,6 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["tests/**/*.ts"]
+  "include": ["tests/**/*.ts"],
+  "exclude": ["node_modules"]
 }

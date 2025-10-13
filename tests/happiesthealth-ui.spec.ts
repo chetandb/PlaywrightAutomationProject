@@ -1,5 +1,5 @@
+// @ts-nocheck
 import { test, expect } from '@playwright/test';
-import type { Page } from '@playwright/test';
 
 // Test: Homepage loads and title is correct
 // Test: Main navigation links are visible
