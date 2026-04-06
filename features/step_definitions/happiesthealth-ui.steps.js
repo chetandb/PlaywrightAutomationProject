@@ -1,15 +1,23 @@
-import { actorCalled, engage } from '@serenity-js/core';
+import { actorCalled, engage, actorInTheSpotlight } from '@serenity-js/core';
 import { BrowseTheWeb, PageElement, By, Navigate } from '@serenity-js/playwright';
 import { Ensure, includes, isVisible } from '@serenity-js/assertions';
 import { chromium } from 'playwright';
-import { Given, Then } from '@cucumber/cucumber';
+import { Given, Then, Before, After } from '@cucumber/cucumber';
 
 let browser, actor;
 
-Given('I open the Happiest Health homepage', async function () {
+Before(async function () {
     if (!browser) browser = await chromium.launch({ headless: true });
     engage(new BrowseTheWeb(browser));
     actor = actorCalled('User');
+});
+
+After(async function () {
+    if (browser) await browser.close();
+    browser = null;
+});
+
+Given('I open the Happiest Health homepage', async function () {
     await actor.attemptsTo(
         Navigate.to('https://www.happiesthealth.com/')
     );
