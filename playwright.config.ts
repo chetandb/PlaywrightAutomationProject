@@ -5,7 +5,7 @@ const config = {
   timeout: 30000,
   expect: { timeout: 10000 },
   fullyParallel: true,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 2,
   retries: process.env.CI ? 2 : 0,
   reporter: [
     ['html'],
@@ -24,6 +24,7 @@ const config = {
       },
       testMatch: /.*\.(spec|test)\.(ts|js)/,
       testIgnore: /api.*\.spec\.ts/,
+      fullyParallel: false,
     },
     {
       name: 'API tests',
