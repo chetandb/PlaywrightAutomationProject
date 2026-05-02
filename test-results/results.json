@@ -1,0 +1,315 @@
+{
+  "config": {
+    "configFile": "C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\playwright.config.ts",
+    "rootDir": "C:/Chetan/code/Playwright/PlaywrightAutomationProject/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/junit.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Chetan/code/Playwright/PlaywrightAutomationProject/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Chetan/code/Playwright/PlaywrightAutomationProject/tests",
+        "testIgnore": [
+          "/api.*\\.spec\\.ts/"
+        ],
+        "testMatch": [
+          "/.*\\.(spec|test)\\.(ts|js)/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Chetan/code/Playwright/PlaywrightAutomationProject/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "API tests",
+        "name": "API tests",
+        "testDir": "C:/Chetan/code/Playwright/PlaywrightAutomationProject/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/api.*\\.spec\\.ts/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.51.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "happiesthealth-ui.spec.ts",
+      "file": "happiesthealth-ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Happiest Health UI",
+          "file": "happiesthealth-ui.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Homepage loads and title is correct",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4037,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-02T11:47:14.630Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee25477bab7d9e89021b-df283e633e86115bbe21",
+              "file": "happiesthealth-ui.spec.ts",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "Main navigation links are visible",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 917,
+                      "error": {
+                        "message": "Error: expect.toBeVisible: Error: strict mode violation: getByRole('link', { name: /Diagnostics/i }) resolved to 2 elements:\n    1) <a rel=\"\" target=\"_self\" href=\"https://diagnostics.happiesthealth.com\">…</a> aka getByRole('link', { name: 'Diagnostics Diagnostics' })\n    2) <a href=\"/\">…</a> aka getByRole('link', { name: 'Diagnostics Logo' })\n\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: /Diagnostics/i })\u001b[22m\n",
+                        "stack": "Error: expect.toBeVisible: Error: strict mode violation: getByRole('link', { name: /Diagnostics/i }) resolved to 2 elements:\n    1) <a rel=\"\" target=\"_self\" href=\"https://diagnostics.happiesthealth.com\">…</a> aka getByRole('link', { name: 'Diagnostics Diagnostics' })\n    2) <a href=\"/\">…</a> aka getByRole('link', { name: 'Diagnostics Logo' })\n\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: /Diagnostics/i })\u001b[22m\n\n    at C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts:21:68",
+                        "location": {
+                          "file": "C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts",
+                          "column": 68,
+                          "line": 21
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(nav)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Knowledge/i\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Diagnostics/i\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   test(\u001b[32m'Featured images are visible on homepage'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts",
+                            "column": 68,
+                            "line": 21
+                          },
+                          "message": "Error: expect.toBeVisible: Error: strict mode violation: getByRole('link', { name: /Diagnostics/i }) resolved to 2 elements:\n    1) <a rel=\"\" target=\"_self\" href=\"https://diagnostics.happiesthealth.com\">…</a> aka getByRole('link', { name: 'Diagnostics Diagnostics' })\n    2) <a href=\"/\">…</a> aka getByRole('link', { name: 'Diagnostics Logo' })\n\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: /Diagnostics/i })\u001b[22m\n\n\n\u001b[0m \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(nav)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Knowledge/i\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Diagnostics/i\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   test(\u001b[32m'Featured images are visible on homepage'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts:21:68\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-02T11:47:19.366Z",
+                      "attachments": [
+                        {
+                          "name": "_prompt-0",
+                          "contentType": "text/markdown",
+                          "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBIYXBwaWVzdCBIZWFsdGggVUkgPj4gTWFpbiBuYXZpZ2F0aW9uIGxpbmtzIGFyZSB2aXNpYmxlCi0gTG9jYXRpb246IEM6XENoZXRhblxjb2RlXFBsYXl3cmlnaHRcUGxheXdyaWdodEF1dG9tYXRpb25Qcm9qZWN0XHRlc3RzXGhhcHBpZXN0aGVhbHRoLXVpLnNwZWMudHM6MTc6MwoKIyBFcnJvciBkZXRhaWxzCgpgYGAKRXJyb3I6IGV4cGVjdC50b0JlVmlzaWJsZTogRXJyb3I6IHN0cmljdCBtb2RlIHZpb2xhdGlvbjogZ2V0QnlSb2xlKCdsaW5rJywgeyBuYW1lOiAvRGlhZ25vc3RpY3MvaSB9KSByZXNvbHZlZCB0byAyIGVsZW1lbnRzOgogICAgMSkgPGEgcmVsPSIiIHRhcmdldD0iX3NlbGYiIGhyZWY9Imh0dHBzOi8vZGlhZ25vc3RpY3MuaGFwcGllc3RoZWFsdGguY29tIj7igKY8L2E+IGFrYSBnZXRCeVJvbGUoJ2xpbmsnLCB7IG5hbWU6ICdEaWFnbm9zdGljcyBEaWFnbm9zdGljcycgfSkKICAgIDIpIDxhIGhyZWY9Ii8iPuKApjwvYT4gYWthIGdldEJ5Um9sZSgnbGluaycsIHsgbmFtZTogJ0RpYWdub3N0aWNzIExvZ28nIH0pCgpDYWxsIGxvZzoKICAtIGV4cGVjdC50b0JlVmlzaWJsZSB3aXRoIHRpbWVvdXQgMTAwMDBtcwogIC0gd2FpdGluZyBmb3IgZ2V0QnlSb2xlKCdsaW5rJywgeyBuYW1lOiAvRGlhZ25vc3RpY3MvaSB9KQoKICAgIGF0IEM6XENoZXRhblxjb2RlXFBsYXl3cmlnaHRcUGxheXdyaWdodEF1dG9tYXRpb25Qcm9qZWN0XHRlc3RzXGhhcHBpZXN0aGVhbHRoLXVpLnNwZWMudHM6MjE6NjgKYGBgCgojIFBhZ2Ugc25hcHNob3QKCmBgYHlhbWwKLSBiYW5uZXI6CiAgLSBsaW5rICJEZWZhdWx0IExvZ28iOgogICAgLSBpbWcgIkRlZmF1bHQgTG9nbyIKICAtIG5hdmlnYXRpb246CiAgICAtIG1lbnU6CiAgICAgIC0gbWVudWl0ZW0gIktub3dsZWRnZSBLbm93bGVkZ2UiOgogICAgICAgIC0gbGluayAiS25vd2xlZGdlIEtub3dsZWRnZSI6CiAgICAgICAgICAtIGltZyAiS25vd2xlZGdlIgogICAgICAgICAgLSB0ZXh0OiBLbm93bGVkZ2UKICAgICAgLSBtZW51aXRlbSAiRGlhZ25vc3RpY3MgRGlhZ25vc3RpY3MiOgogICAgICAgIC0gbGluayAiRGlhZ25vc3RpY3MgRGlhZ25vc3RpY3MiOgogICAgICAgICAgLSBpbWcgIkRpYWdub3N0aWNzIgogICAgICAgICAgLSB0ZXh0OiBEaWFnbm9zdGljcwogICAgICAtIG1lbnVpdGVtICJDbGluaWNzIENsaW5pY3MiOgogICAgICAgIC0gbGluayAiQ2xpbmljcyBDbGluaWNzIjoKICAgICAgICAgIC0gaW1nICJDbGluaWNzIgogICAgICAgICAgLSB0ZXh0OiBDbGluaWNzCiAgICAgIC0gbWVudWl0ZW0gIk1hZ2F6aW5lIE1hZ2F6aW5lIjoKICAgICAgICAtIGxpbmsgIk1hZ2F6aW5lIE1hZ2F6aW5lIjoKICAgICAgICAgIC0gaW1nICJNYWdhemluZSIKICAgICAgICAgIC0gdGV4dDogTWFnYXppbmUKICAgICAgLSBtZW51aXRlbSAiSGVhbHRoIFN1bW1pdHMgSGVhbHRoIFN1bW1pdHMiOgogICAgICAgIC0gbGluayAiSGVhbHRoIFN1bW1pdHMgSGVhbHRoIFN1bW1pdHMiOgogICAgICAgICAgLSBpbWcgIkhlYWx0aCBTdW1taXRzIgogICAgICAgICAgLSB0ZXh0OiBIZWFsdGggU3VtbWl0cwogIC0gbWVudToKICAgIC0gbGlzdGl0ZW06CiAgICAgIC0gYnV0dG9uOgogICAgICAgIC0gaW1nCiAgICAtIGxpc3RpdGVtOgogICAgICAtIGJ1dHRvbjoKICAgICAgICAtIGltZwogICAgLSBsaXN0aXRlbToKICAgICAgLSBidXR0b246CiAgICAgICAgLSBsaW5rOgogICAgICAgICAgLSBpbWcKLSBuYXZpZ2F0aW9uOgogIC0gbGluayAiQ2F0ZWdvcmllcyBDYXRlZ29yaWVzIjoKICAgIC0gaW1nICJDYXRlZ29yaWVzIgogICAgLSBwYXJhZ3JhcGg6IENhdGVnb3JpZXMKICAtIGxpbmsgIlZpZGVvcyBWaWRlb3MiOgogICAgLSBpbWcgIlZpZGVvcyIKICAgIC0gcGFyYWdyYXBoOiBWaWRlb3MKICAtIGxpbmsgIlBvZGNhc3RzIFBvZGNhc3RzIjoKICAgIC0gaW1nICJQb2RjYXN0cyIKICAgIC0gcGFyYWdyYXBoOiBQb2RjYXN0cwogIC0gbGluayAiQmVhdCBEaWFiZXRlcyBCZWF0IERpYWJldGVzIjoKICAgIC0gaW1nICJCZWF0IERpYWJldGVzIgogICAgLSBwYXJhZ3JhcGg6IEJlYXQgRGlhYmV0ZXMKICAtIGxpbmsgIkhvdyBUby4uLiBIb3cgVG8uLi4iOgogICAgLSBpbWcgIkhvdyBUby4uLiIKICAgIC0gcGFyYWdyYXBoOiBIb3cgVG8uLi4KICAtIGxpbmsgIkRvYyBUYWxlcyBEb2MgVGFsZXMiOgogICAgLSBpbWcgIkRvYyBUYWxlcyIKICAgIC0gcGFyYWdyYXBoOiBEb2MgVGFsZXMKICAtIGJ1dHRvbiAiSGVhbHRoemluZSBIZWFsdGh6aW5lIjoKICAgIC0gaW1nICJIZWFsdGh6aW5lIgogICAgLSBwYXJhZ3JhcGg6IEhlYWx0aHppbmUKLSBtYWluOgogIC0gYXJ0aWNsZToKICAgIC0gaW1nICJuby1kYXRhLWltYWdlIgogIC0gaGVhZGluZyAiRWRpdG9yJ3MgUGljayIgW2xldmVsPTZdCiAgLSBsaW5rICJWaWV3IEFsbCI6CiAgICAtIHBhcmFncmFwaDogVmlldyBBbGwKICAtIGltZyAibm8tZGF0YS1pbWFnZSIKICAtIGhlYWRpbmcgIk1hZ2F6aW5lIiBbbGV2ZWw9Nl0KICAtIGxpbmsgIlZpZXcgQWxsIjoKICAgIC0gcGFyYWdyYXBoOiBWaWV3IEFsbAogIC0gbGluayAibWVkaWEtY292ZXItaW1hZ2UiOgogICAgLSBpbWcgIm1lZGlhLWNvdmVyLWltYWdlIgogIC0gbGluayAiVGhlIEhlYWx0aCBJbnN1cmFuY2UgSXNzdWUiOgogICAgLSBoZWFkaW5nICJUaGUgSGVhbHRoIEluc3VyYW5jZSBJc3N1ZSIgW2xldmVsPTNdCiAgLSBwYXJhZ3JhcGg6IOKXjwogIC0gcGFyYWdyYXBoOiBNYXkgMjAyNgogIC0gcGFyYWdyYXBoOiBJbiB0aGlzIGlzc3VlIG9mIEhhcHBpZXN0IEhlYWx0aCBtYWdhemluZSBvbiBIZWFsdGggSW5zdXJhbmNlLCB3ZSBleHBsYWluIHdoeSBoZWFsdGggY292ZXIgaXMgYSB2aXRhbCBzYWZldHkgbmV0LCBidXQgc2hvdWxkIG5ldmVyIGJlIHNlZW4gYXMgYSBzdWJzdGl0dXRlIGZvciBhIGhlYWx0aHkgbGlmZXN0eWxlIGFuZCBwcmV2ZW50aXZlIHdlbGxuZXNzCiAgLSBsaW5rICJCdXkgRS1NYWciCiAgLSBsaW5rICJCdXkgUHJpbnQiCiAgLSBoZWFkaW5nICJBc2sgYW4gRXhwZXJ0IiBbbGV2ZWw9Nl0KICAtIGxpbmsgIlZpZXcgQWxsIjoKICAgIC0gcGFyYWdyYXBoOiBWaWV3IEFsbAogIC0gbGluayAiUG9zdCBhIFF1ZXJ5IgogIC0gaGVhZGluZyAiV2ViIFN0b3JpZXMiIFtsZXZlbD02XQogIC0gbGluayAiVmlldyBBbGwiOgogICAgLSBwYXJhZ3JhcGg6IFZpZXcgQWxsCiAgLSAnbGluayAiSGlnaCBzYWx0IGludGFrZSBpcyBsaW5rZWQgdG8gZmFzdGVyIG1lbW9yeSBkZWNsaW5lIGluIG1lbjogU3R1ZHkiJzoKICAgIC0gaW1nCiAgICAtIHBhcmFncmFwaDogIkhpZ2ggc2FsdCBpbnRha2UgaXMgbGlua2VkIHRvIGZhc3RlciBtZW1vcnkgZGVjbGluZSBpbiBtZW46IFN0dWR5IgogIC0gbGluayAiSW5kaWFuIGRyaW5rcyBmb3Igc3VtbWVyIjoKICAgIC0gaW1nCiAgICAtIHBhcmFncmFwaDogSW5kaWFuIGRyaW5rcyBmb3Igc3VtbWVyCiAgLSAnbGluayAiV2VsbG5lc3MgSHViOiBIb3cgdG8gQmUgYSBQZWFjZW1ha2VyIic6CiAgICAtIGltZwogICAgLSBwYXJhZ3JhcGg6ICJXZWxsbmVzcyBIdWI6IEhvdyB0byBCZSBhIFBlYWNlbWFrZXIiCiAgLSBsaW5rICJXaHkgR2VuIFogaXMgdHVybmluZyB0byBiZWR0aW1lIHlvZ2EgZm9yIGJldHRlciBzbGVlcCI6CiAgICAtIGltZwogICAgLSBwYXJhZ3JhcGg6IFdoeSBHZW4gWiBpcyB0dXJuaW5nIHRvIGJlZHRpbWUgeW9nYSBmb3IgYmV0dGVyIHNsZWVwCiAgLSBsaW5rICJIZWF2eSByYWluIGJyaW5ncyBCYW5nYWxvcmUgdG8gYSBoYWx0IChhZ2FpbikiOgogICAgLSBpbWcKICAgIC0gcGFyYWdyYXBoOiBIZWF2eSByYWluIGJyaW5ncyBCYW5nYWxvcmUgdG8gYSBoYWx0IChhZ2FpbikKICAtIGxpbmsgIkZpc2ggb2lsIG1heSBiYWNrZmlyZSwgY2F1dGlvbiBuZXcgZ3VpZGVsaW5lcyI6CiAgICAtIGltZwogICAgLSBwYXJhZ3JhcGg6IEZpc2ggb2lsIG1heSBiYWNrZmlyZSwgY2F1dGlvbiBuZXcgZ3VpZGVsaW5lcwogIC0gaGVhZGluZyAiUG9kY2FzdHMiIFtsZXZlbD02XQogIC0gbGluayAiVmlldyBBbGwiOgogICAgLSBwYXJhZ3JhcGg6IFZpZXcgQWxsCiAgLSBsaW5rICJ1bmRlZmluZWQgVGh1bWJuYWlsIjoKICAgIC0gaW1nICJ1bmRlZmluZWQgVGh1bWJuYWlsIgogIC0gbGluayAidW5kZWZpbmVkIFRodW1ibmFpbCI6CiAgICAtIGltZyAidW5kZWZpbmVkIFRodW1ibmFpbCIKICAtIGxpbmsgInVuZGVmaW5lZCBUaHVtYm5haWwiOgogICAgLSBpbWcgInVuZGVmaW5lZCBUaHVtYm5haWwiCiAgLSBoZWFkaW5nICJWaWRlb3MiIFtsZXZlbD02XQogIC0gbGluayAiVmlldyBBbGwiOgogICAgLSBwYXJhZ3JhcGg6IFZpZXcgQWxsCiAgLSBsaW5rICJ1bmRlZmluZWQgVGh1bWJuYWlsIjoKICAgIC0gaW1nICJ1bmRlZmluZWQgVGh1bWJuYWlsIgogIC0gbGluayAidW5kZWZpbmVkIFRodW1ibmFpbCI6CiAgICAtIGltZyAidW5kZWZpbmVkIFRodW1ibmFpbCIKICAtIGxpbmsgInVuZGVmaW5lZCBUaHVtYm5haWwiOgogICAgLSBpbWcgInVuZGVmaW5lZCBUaHVtYm5haWwiCiAgLSBhcnRpY2xlOgogICAgLSBoZWFkaW5nICJRdWl6IiBbbGV2ZWw9Nl0KICAgIC0gbGluayAiVmlldyBBbGwiOgogICAgICAtIHBhcmFncmFwaDogVmlldyBBbGwKICAgIC0gaW1nICJzdXJ2ZXktcmVzcG9uc2UtY2FyZC1pbWFnZSIKICAgIC0gaW1nCiAgICAtICdoZWFkaW5nICJJbmZlY3Rpb24gaW5zaWdodHM6IFdoYXQgeW91IG11c3Qga25vdyIgW2xldmVsPTFdJwogICAgLSBoZWFkaW5nIFtsZXZlbD0zXQogICAgLSBsaW5rICJTdGFydCBRdWl6IjoKICAgICAgLSBwYXJhZ3JhcGg6IFN0YXJ0IFF1aXoKICAtIGhlYWRpbmcgIkhlYWx0aCBTdW1taXRzIiBbbGV2ZWw9Nl0KICAtIGxpbmsgIlZpZXcgQWxsIjoKICAgIC0gcGFyYWdyYXBoOiBWaWV3IEFsbAogIC0gdGFibGlzdCAibGFiIEFQSSB0YWJzIGV4YW1wbGUiOgogICAgLSB0YWIgIlVwY29taW5nIFN1bW1pdHMiIFtzZWxlY3RlZF0KICAgIC0gdGFiICJQYXN0IFN1bW1pdHMiCiAgLSBpbWcgIkNhbGVuZGFyIgogIC0gdGV4dDogRGF0ZSBOb3ZlbWJlciAxOXRoCiAgLSBpbWcKICAtIGltZyAiVGltZSIKICAtIHRleHQ6IFRpbWUgKElTVCkgOTowMCBBTSBPbndhcmRzCiAgLSBpbWcgIkxvY2F0aW9uIgogIC0gdGV4dDogTG9jYXRpb24gU3QuIEpvaG4ncyBBdWRpdG9yaXVtLCBLb3JhbWFuZ2FsYSwgQmVuZ2FsdXJ1LCBLYXJuYXRha2EgNTYwMDM0CiAgLSBsaW5rICJSZWdpc3RlciBOb3ciCiAgLSBoZWFkaW5nICJNeSBTdG9yeSIgW2xldmVsPTZdCiAgLSBsaW5rICJWaWV3IEFsbCI6CiAgICAtIHBhcmFncmFwaDogVmlldyBBbGwKICAtIGJ1dHRvbiAi4oaQIFByZXZpb3VzIgogIC0gJ2xpbmsgIkRlZnlpbmcgYWdlOiA2OS15ZWFyLW9sZCBpbnNwaXJlcyB3aXRoIHJvbGxlciBza2F0aW5nIG1hc3RlcnkiJzoKICAgIC0gJ2ltZyAiRGVmeWluZyBhZ2U6IDY5LXllYXItb2xkIGluc3BpcmVzIHdpdGggcm9sbGVyIHNrYXRpbmcgbWFzdGVyeSInCiAgLSBidXR0b24gIuKGkiBOZXh0IgogIC0gJ2hlYWRpbmcgIkRlZnlpbmcgYWdlOiA2OS15ZWFyLW9sZCBpbnNwaXJlcyB3aXRoIHJvbGxlciBza2F0aW5nIG1hc3RlcnkiIFtsZXZlbD02XScKICAtIHBhcmFncmFwaDogVGhpcyBCYW5nYWxvcmVhbiwgYXBhcnQgZnJvbSBza2F0aW5nLCBhbHNvIHByYWN0aWNlcyB5b2dhIGFuZCBzd2ltbWluZyByZWd1bGFybHkgdG8gc3RheSBmaXQKICAtIGFydGljbGU6CiAgICAtIGhlYWRpbmcgIlBvbGxzIiBbbGV2ZWw9Nl0KICAgIC0gaW1nICJzdXJ2ZXktcmVzcG9uc2UtY2FyZC1pbWFnZSIKICAgIC0gaW1nICJob21lLXBvbGwtaWNvbiIKICAgIC0gaGVhZGluZyAiSG93IGxpa2VseSBhcmUgeW91IHRvIHVzZSBhIHdlaWdodC1sb3NzIGRydWc/IiBbbGV2ZWw9MV0KICAgIC0gcmFkaW8KICAgIC0gdGV4dDogVW5saWtlbHkKICAgIC0gcmFkaW8KICAgIC0gdGV4dDogTGlrZWx5CiAgICAtIHJhZGlvCiAgICAtIHRleHQ6IFZlcnkgbGlrZWx5CiAgICAtIHJhZGlvCiAgICAtIHRleHQ6IE5vdCBzdXJlCiAgICAtIGJ1dHRvbiAiVm90ZSIgW2Rpc2FibGVkXQotIGltZwotIGxpc3Q6CiAgLSBidXR0b24gIkZlZWRiYWNrIgotIGNvbnRlbnRpbmZvOgogIC0gbGluayAiRGlhZ25vc3RpY3MgTG9nbyI6CiAgICAtIGltZyAiRGlhZ25vc3RpY3MgTG9nbyIKICAtIHBhcmFncmFwaDogSGFwcGllc3QgSGVhbHRoIFN5c3RlbXMgUHZ0LiBMdGQuIDE0MS8yLCBTdC5Kb2hu4oCZcyBSZXNlYXJjaCBJbnN0aXR1dGUsIEdhdGUgNCwgMTAwIEZlZXQgUm9hZCwgS29yYW1hbmdhbGEsIEJlbmdhbHVydSwgS2FybmF0YWthIDU2MDAzNAogIC0gbGlzdDoKICAgIC0gbGlzdGl0ZW06CiAgICAgIC0gbGluayAiZmFjZWJvb2siOgogICAgICAgIC0gaW1nICJmYWNlYm9vayIKICAgIC0gbGlzdGl0ZW06CiAgICAgIC0gbGluayAiaW5zdGFncmFtIjoKICAgICAgICAtIGltZyAiaW5zdGFncmFtIgogICAgLSBsaXN0aXRlbToKICAgICAgLSBsaW5rICJsaW5rZWRpbiI6CiAgICAgICAgLSBpbWcgImxpbmtlZGluIgogICAgLSBsaXN0aXRlbToKICAgICAgLSBsaW5rICJ5b3V0dWJlIjoKICAgICAgICAtIGltZyAieW91dHViZSIKICAgIC0gbGlzdGl0ZW06CiAgICAgIC0gbGluayAiY29tL2hhcHBpZXN0aGVhbHRoMSI6CiAgICAgICAgLSBpbWcgImNvbS9oYXBwaWVzdGhlYWx0aDEiCiAgICAtIGxpc3RpdGVtOgogICAgICAtIGxpbmsgInBpbnRlcmVzdCI6CiAgICAgICAgLSBpbWcgInBpbnRlcmVzdCIKICAtIGxpc3Q6CiAgICAtIGxpc3RpdGVtOgogICAgICAtIGxpbmsgIkFib3V0IFVzIgogICAgLSBsaXN0aXRlbToKICAgICAgLSBsaW5rICJDb250YWN0IFVzIgogICAgLSBsaXN0aXRlbToKICAgICAgLSBsaW5rICJQcml2YWN5IFBvbGljeSIKICAgIC0gbGlzdGl0ZW06CiAgICAgIC0gbGluayAiRWRpdG9yaWFsIFBvbGljeSIKICAgIC0gbGlzdGl0ZW06CiAgICAgIC0gbGluayAiQ2FuY2VsbGF0aW9uIGFuZCBSZWZ1bmQgUG9saWN5IgogICAgLSBsaXN0aXRlbToKICAgICAgLSBsaW5rICJDYXJlZXJzIgogICAgLSBsaXN0aXRlbToKICAgICAgLSBsaW5rICJTaGlwcGluZyBQb2xpY3kiCiAgICAtIGxpc3RpdGVtOgogICAgICAtIGxpbmsgIk1hZ2F6aW5lIEZlZWRiYWNrIgogICAgLSBsaXN0aXRlbToKICAgICAgLSBsaW5rICJGQVFzIgogICAgLSBsaXN0aXRlbToKICAgICAgLSBsaW5rICJUZXJtcyBvZiBVc2UiCiAgICAtIGxpc3RpdGVtOgogICAgICAtIGxpbmsgIkFkdmVydGlzaW5nIFBvbGljeSIKICAgIC0gbGlzdGl0ZW06CiAgICAgIC0gbGluayAiTGVhZGVyc2hpcCIKICAgIC0gbGlzdGl0ZW06CiAgICAgIC0gbGluayAiSW52ZXN0b3JzIgogICAgLSBsaXN0aXRlbToKICAgICAgLSBsaW5rICJVbnN1YnNjcmliZSIKICAgIC0gbGlzdGl0ZW06IEZlZWRiYWNrCiAgLSBwYXJhZ3JhcGg6IENvcHlyaWdodCDCqQogIC0gcGFyYWdyYXBoOiBIQVBQSUVTVCBIRUFMVEggU1lTVEVNUyBQUklWQVRFIExJTUlURUQuIEFsbCBSaWdodHMgUmVzZXJ2ZWQuCiAgLSBwYXJhZ3JhcGg6CiAgICAtIHN0cm9uZzogIkRpc2NsYWltZXI6IgogICAgLSB0ZXh0OiBIYXBwaWVzdCBIZWFsdGggb2ZmZXJzIGtub3dsZWRnZSBjb250ZW50IGZvciBpbmZvcm1hdGlvbmFsIGFuZCBlZHVjYXRpb25hbCBwdXJwb3NlcyBvbmx5LiBUaGlzIGNvbnRlbnQgaXMgbm90IGludGVuZGVkIHRvIGJlIGEgc3Vic3RpdHV0ZSBmb3IgcHJvZmVzc2lvbmFsIG1lZGljYWwgYWR2aWNlLCBkaWFnbm9zaXMsIG9yIHRyZWF0bWVudC4gV2hpbGUgb3VyIGNsaW5pY3MgcHJvdmlkZSBhY2Nlc3MgdG8gbGljZW5zZWQgbWVkaWNhbCBwcm9mZXNzaW9uYWxzIGFuZCBkaWFnbm9zdGljIHNlcnZpY2VzLCBhbnkgaGVhbHRoLXJlbGF0ZWQgZGVjaXNpb25zIGJhc2VkIG9uIGNvbnRlbnQgZnJvbSBvdXIgd2Vic2l0ZSBvciBvdGhlciBwbGF0Zm9ybXMgc2hvdWxkIGJlIG1hZGUgb25seSBhZnRlciBjb25zdWx0aW5nIGEgcXVhbGlmaWVkIGhlYWx0aGNhcmUgcHJvdmlkZXIuCiAgLSBwYXJhZ3JhcGg6IEFsd2F5cyBzZWVrIHRoZSBndWlkYW5jZSBvZiBhIG1lZGljYWwgcHJvZmVzc2lvbmFsIGZvciBhbnkgY29uY2VybnMgcmVnYXJkaW5nIHlvdXIgaGVhbHRoIG9yIHdlbGxuZXNzLgpgYGAKCiMgVGVzdCBzb3VyY2UKCmBgYHRzCiAgIDEgfCBpbXBvcnQgeyB0ZXN0LCBleHBlY3QgfSBmcm9tICdAcGxheXdyaWdodC90ZXN0JzsKICAgMiB8CiAgIDMgfCBjb25zdCBIT01FUEFHRV9VUkwgPSAnaHR0cHM6Ly93d3cuaGFwcGllc3RoZWFsdGguY29tLyc7CiAgIDQgfAogICA1IHwgdGVzdC5kZXNjcmliZSgnSGFwcGllc3QgSGVhbHRoIFVJJywgKCkgPT4gewogICA2IHwgICB0ZXN0LmJlZm9yZUVhY2goYXN5bmMgKHsgcGFnZSB9KSA9PiB7CiAgIDcgfCAgICAgYXdhaXQgcGFnZS5nb3RvKEhPTUVQQUdFX1VSTCwgeyAKICAgOCB8ICAgICAgIHdhaXRVbnRpbDogJ2RvbWNvbnRlbnRsb2FkZWQnLAogICA5IHwgICAgICAgdGltZW91dDogNjAwMDAKICAxMCB8ICAgICB9KTsKICAxMSB8ICAgfSk7CiAgMTIgfAogIDEzIHwgICB0ZXN0KCdIb21lcGFnZSBsb2FkcyBhbmQgdGl0bGUgaXMgY29ycmVjdCcsIGFzeW5jICh7IHBhZ2UgfSkgPT4gewogIDE0IHwgICAgIGF3YWl0IGV4cGVjdChwYWdlKS50b0hhdmVUaXRsZSgvSGFwcGllc3QgSGVhbHRoL2kpOwogIDE1IHwgICB9KTsKICAxNiB8CiAgMTcgfCAgIHRlc3QoJ01haW4gbmF2aWdhdGlvbiBsaW5rcyBhcmUgdmlzaWJsZScsIGFzeW5jICh7IHBhZ2UgfSkgPT4gewogIDE4IHwgICAgIGNvbnN0IG5hdiA9IHBhZ2UuZ2V0QnlSb2xlKCduYXZpZ2F0aW9uJykuZmlyc3QoKTsKICAxOSB8ICAgICBhd2FpdCBleHBlY3QobmF2KS50b0JlVmlzaWJsZSgpOwogIDIwIHwgICAgIGF3YWl0IGV4cGVjdChwYWdlLmdldEJ5Um9sZSgnbGluaycsIHsgbmFtZTogL0tub3dsZWRnZS9pIH0pKS50b0JlVmlzaWJsZSgpOwo+IDIxIHwgICAgIGF3YWl0IGV4cGVjdChwYWdlLmdldEJ5Um9sZSgnbGluaycsIHsgbmFtZTogL0RpYWdub3N0aWNzL2kgfSkpLnRvQmVWaXNpYmxlKCk7CiAgICAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXiBFcnJvcjogZXhwZWN0LnRvQmVWaXNpYmxlOiBFcnJvcjogc3RyaWN0IG1vZGUgdmlvbGF0aW9uOiBnZXRCeVJvbGUoJ2xpbmsnLCB7IG5hbWU6IC9EaWFnbm9zdGljcy9pIH0pIHJlc29sdmVkIHRvIDIgZWxlbWVudHM6CiAgMjIgfCAgIH0pOwogIDIzIHwKICAyNCB8ICAgdGVzdCgnRmVhdHVyZWQgaW1hZ2VzIGFyZSB2aXNpYmxlIG9uIGhvbWVwYWdlJywgYXN5bmMgKHsgcGFnZSB9KSA9PiB7CiAgMjUgfCAgICAgY29uc3QgZmlyc3RJbWFnZSA9IHBhZ2UubG9jYXRvcignaW1nJykuZmlyc3QoKTsKICAyNiB8ICAgICBhd2FpdCBleHBlY3QoZmlyc3RJbWFnZSkudG9CZVZpc2libGUoKTsKICAyNyB8ICAgICAKICAyOCB8ICAgICAvLyBWZXJpZnkgbWVhbmluZ2Z1bCBpbWFnZSBkaW1lbnNpb25zIChleGNsdWRlIHRyYWNraW5nIHBpeGVscykKICAyOSB8ICAgICBjb25zdCBib3VuZGluZ0JveCA9IGF3YWl0IGZpcnN0SW1hZ2UuYm91bmRpbmdCb3goKTsKICAzMCB8ICAgICBleHBlY3QoYm91bmRpbmdCb3gpLm5vdC50b0JlTnVsbCgpOwogIDMxIHwgICAgIGV4cGVjdChib3VuZGluZ0JveD8ud2lkdGgpLnRvQmVHcmVhdGVyVGhhbk9yRXF1YWwoNTApOwogIDMyIHwgICAgIGV4cGVjdChib3VuZGluZ0JveD8uaGVpZ2h0KS50b0JlR3JlYXRlclRoYW5PckVxdWFsKDUwKTsKICAzMyB8ICAgfSk7CiAgMzQgfCB9KTsKICAzNSB8CmBgYA=="
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts",
+                        "column": 68,
+                        "line": 21
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ee25477bab7d9e89021b-e256045f4cf383bd4705",
+              "file": "happiesthealth-ui.spec.ts",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "Featured images are visible on homepage",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 998,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m50\u001b[39m\nReceived:    \u001b[31m32\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m50\u001b[39m\nReceived:    \u001b[31m32\u001b[39m\n    at C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts:32:33",
+                        "matcherResult": {
+                          "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m50\u001b[39m\nReceived:    \u001b[31m32\u001b[39m",
+                          "pass": false
+                        },
+                        "location": {
+                          "file": "C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts",
+                          "column": 33,
+                          "line": 32
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 30 |\u001b[39m     expect(boundingBox)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeNull()\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m     expect(boundingBox\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mwidth)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m50\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m     expect(boundingBox\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mheight)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m50\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts",
+                            "column": 33,
+                            "line": 32
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m50\u001b[39m\nReceived:    \u001b[31m32\u001b[39m\n\n\u001b[0m \u001b[90m 30 |\u001b[39m     expect(boundingBox)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeNull()\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m     expect(boundingBox\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mwidth)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m50\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m     expect(boundingBox\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mheight)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m50\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts:32:33\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-02T11:47:21.218Z",
+                      "attachments": [
+                        {
+                          "name": "_prompt-0",
+                          "contentType": "text/markdown",
+                          "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBIYXBwaWVzdCBIZWFsdGggVUkgPj4gRmVhdHVyZWQgaW1hZ2VzIGFyZSB2aXNpYmxlIG9uIGhvbWVwYWdlCi0gTG9jYXRpb246IEM6XENoZXRhblxjb2RlXFBsYXl3cmlnaHRcUGxheXdyaWdodEF1dG9tYXRpb25Qcm9qZWN0XHRlc3RzXGhhcHBpZXN0aGVhbHRoLXVpLnNwZWMudHM6MjQ6MwoKIyBFcnJvciBkZXRhaWxzCgpgYGAKRXJyb3I6IGV4cGVjdChyZWNlaXZlZCkudG9CZUdyZWF0ZXJUaGFuT3JFcXVhbChleHBlY3RlZCkKCkV4cGVjdGVkOiA+PSA1MApSZWNlaXZlZDogICAgMzIKICAgIGF0IEM6XENoZXRhblxjb2RlXFBsYXl3cmlnaHRcUGxheXdyaWdodEF1dG9tYXRpb25Qcm9qZWN0XHRlc3RzXGhhcHBpZXN0aGVhbHRoLXVpLnNwZWMudHM6MzI6MzMKYGBgCgojIFBhZ2Ugc25hcHNob3QKCmBgYHlhbWwKLSBhbGVydApgYGAKCiMgVGVzdCBzb3VyY2UKCmBgYHRzCiAgIDEgfCBpbXBvcnQgeyB0ZXN0LCBleHBlY3QgfSBmcm9tICdAcGxheXdyaWdodC90ZXN0JzsKICAgMiB8CiAgIDMgfCBjb25zdCBIT01FUEFHRV9VUkwgPSAnaHR0cHM6Ly93d3cuaGFwcGllc3RoZWFsdGguY29tLyc7CiAgIDQgfAogICA1IHwgdGVzdC5kZXNjcmliZSgnSGFwcGllc3QgSGVhbHRoIFVJJywgKCkgPT4gewogICA2IHwgICB0ZXN0LmJlZm9yZUVhY2goYXN5bmMgKHsgcGFnZSB9KSA9PiB7CiAgIDcgfCAgICAgYXdhaXQgcGFnZS5nb3RvKEhPTUVQQUdFX1VSTCwgeyAKICAgOCB8ICAgICAgIHdhaXRVbnRpbDogJ2RvbWNvbnRlbnRsb2FkZWQnLAogICA5IHwgICAgICAgdGltZW91dDogNjAwMDAKICAxMCB8ICAgICB9KTsKICAxMSB8ICAgfSk7CiAgMTIgfAogIDEzIHwgICB0ZXN0KCdIb21lcGFnZSBsb2FkcyBhbmQgdGl0bGUgaXMgY29ycmVjdCcsIGFzeW5jICh7IHBhZ2UgfSkgPT4gewogIDE0IHwgICAgIGF3YWl0IGV4cGVjdChwYWdlKS50b0hhdmVUaXRsZSgvSGFwcGllc3QgSGVhbHRoL2kpOwogIDE1IHwgICB9KTsKICAxNiB8CiAgMTcgfCAgIHRlc3QoJ01haW4gbmF2aWdhdGlvbiBsaW5rcyBhcmUgdmlzaWJsZScsIGFzeW5jICh7IHBhZ2UgfSkgPT4gewogIDE4IHwgICAgIGNvbnN0IG5hdiA9IHBhZ2UuZ2V0QnlSb2xlKCduYXZpZ2F0aW9uJykuZmlyc3QoKTsKICAxOSB8ICAgICBhd2FpdCBleHBlY3QobmF2KS50b0JlVmlzaWJsZSgpOwogIDIwIHwgICAgIGF3YWl0IGV4cGVjdChwYWdlLmdldEJ5Um9sZSgnbGluaycsIHsgbmFtZTogL0tub3dsZWRnZS9pIH0pKS50b0JlVmlzaWJsZSgpOwogIDIxIHwgICAgIGF3YWl0IGV4cGVjdChwYWdlLmdldEJ5Um9sZSgnbGluaycsIHsgbmFtZTogL0RpYWdub3N0aWNzL2kgfSkpLnRvQmVWaXNpYmxlKCk7CiAgMjIgfCAgIH0pOwogIDIzIHwKICAyNCB8ICAgdGVzdCgnRmVhdHVyZWQgaW1hZ2VzIGFyZSB2aXNpYmxlIG9uIGhvbWVwYWdlJywgYXN5bmMgKHsgcGFnZSB9KSA9PiB7CiAgMjUgfCAgICAgY29uc3QgZmlyc3RJbWFnZSA9IHBhZ2UubG9jYXRvcignaW1nJykuZmlyc3QoKTsKICAyNiB8ICAgICBhd2FpdCBleHBlY3QoZmlyc3RJbWFnZSkudG9CZVZpc2libGUoKTsKICAyNyB8ICAgICAKICAyOCB8ICAgICAvLyBWZXJpZnkgbWVhbmluZ2Z1bCBpbWFnZSBkaW1lbnNpb25zIChleGNsdWRlIHRyYWNraW5nIHBpeGVscykKICAyOSB8ICAgICBjb25zdCBib3VuZGluZ0JveCA9IGF3YWl0IGZpcnN0SW1hZ2UuYm91bmRpbmdCb3goKTsKICAzMCB8ICAgICBleHBlY3QoYm91bmRpbmdCb3gpLm5vdC50b0JlTnVsbCgpOwogIDMxIHwgICAgIGV4cGVjdChib3VuZGluZ0JveD8ud2lkdGgpLnRvQmVHcmVhdGVyVGhhbk9yRXF1YWwoNTApOwo+IDMyIHwgICAgIGV4cGVjdChib3VuZGluZ0JveD8uaGVpZ2h0KS50b0JlR3JlYXRlclRoYW5PckVxdWFsKDUwKTsKICAgICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXiBFcnJvcjogZXhwZWN0KHJlY2VpdmVkKS50b0JlR3JlYXRlclRoYW5PckVxdWFsKGV4cGVjdGVkKQogIDMzIHwgICB9KTsKICAzNCB8IH0pOwogIDM1IHwKYGBg"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Chetan\\code\\Playwright\\PlaywrightAutomationProject\\tests\\happiesthealth-ui.spec.ts",
+                        "column": 33,
+                        "line": 32
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ee25477bab7d9e89021b-24bd494803a860c067f8",
+              "file": "happiesthealth-ui.spec.ts",
+              "line": 24,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api.spec.ts",
+      "file": "api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Fetch GitHub user details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "API tests",
+              "projectName": "API tests",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 394,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-02T11:47:14.629Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1ea1b1599cbc08f16936-25ebc69844cdc50702e7",
+          "file": "api.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-02T11:47:13.535Z",
+    "duration": 8908.387999999999,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

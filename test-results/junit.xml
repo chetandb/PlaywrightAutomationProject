@@ -1,0 +1,54 @@
+<testsuites id="" name="" tests="4" failures="2" skipped="0" errors="0" time="8.908387999999999">
+<testsuite name="happiesthealth-ui.spec.ts" timestamp="2026-05-02T11:47:13.568Z" hostname="chromium" tests="3" failures="2" skipped="0" time="5.952" errors="0">
+<testcase name="Happiest Health UI › Homepage loads and title is correct" classname="happiesthealth-ui.spec.ts" time="4.037">
+</testcase>
+<testcase name="Happiest Health UI › Main navigation links are visible" classname="happiesthealth-ui.spec.ts" time="0.917">
+<failure message="happiesthealth-ui.spec.ts:17:3 Main navigation links are visible" type="FAILURE">
+<![CDATA[  [chromium] › happiesthealth-ui.spec.ts:17:3 › Happiest Health UI › Main navigation links are visible 
+
+    Error: expect.toBeVisible: Error: strict mode violation: getByRole('link', { name: /Diagnostics/i }) resolved to 2 elements:
+        1) <a rel="" target="_self" href="https://diagnostics.happiesthealth.com">…</a> aka getByRole('link', { name: 'Diagnostics Diagnostics' })
+        2) <a href="/">…</a> aka getByRole('link', { name: 'Diagnostics Logo' })
+
+    Call log:
+      - expect.toBeVisible with timeout 10000ms
+      - waiting for getByRole('link', { name: /Diagnostics/i })
+
+
+      19 |     await expect(nav).toBeVisible();
+      20 |     await expect(page.getByRole('link', { name: /Knowledge/i })).toBeVisible();
+    > 21 |     await expect(page.getByRole('link', { name: /Diagnostics/i })).toBeVisible();
+         |                                                                    ^
+      22 |   });
+      23 |
+      24 |   test('Featured images are visible on homepage', async ({ page }) => {
+        at C:\Chetan\code\Playwright\PlaywrightAutomationProject\tests\happiesthealth-ui.spec.ts:21:68
+]]>
+</failure>
+</testcase>
+<testcase name="Happiest Health UI › Featured images are visible on homepage" classname="happiesthealth-ui.spec.ts" time="0.998">
+<failure message="happiesthealth-ui.spec.ts:24:3 Featured images are visible on homepage" type="FAILURE">
+<![CDATA[  [chromium] › happiesthealth-ui.spec.ts:24:3 › Happiest Health UI › Featured images are visible on homepage 
+
+    Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 50
+    Received:    32
+
+      30 |     expect(boundingBox).not.toBeNull();
+      31 |     expect(boundingBox?.width).toBeGreaterThanOrEqual(50);
+    > 32 |     expect(boundingBox?.height).toBeGreaterThanOrEqual(50);
+         |                                 ^
+      33 |   });
+      34 | });
+      35 |
+        at C:\Chetan\code\Playwright\PlaywrightAutomationProject\tests\happiesthealth-ui.spec.ts:32:33
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="api.spec.ts" timestamp="2026-05-02T11:47:13.568Z" hostname="API tests" tests="1" failures="0" skipped="0" time="0.394" errors="0">
+<testcase name="Fetch GitHub user details" classname="api.spec.ts" time="0.394">
+</testcase>
+</testsuite>
+</testsuites>
